@@ -11,4 +11,9 @@
 // Init glew, check version, init gl and check versions.
 void InitGlewAndGL();
 
+/// Sets up View and Projection matrices for test-rendering.
+void SetupViewProjectionGL(int width, int height);
+void RenderTriangle();
+
+
 #endif

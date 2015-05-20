@@ -20,6 +20,7 @@
 
 
 void BasicWindow();
-void GLWindow();
+void SingleGLWindow();
+void MultiGLWindows();
 
 #endif

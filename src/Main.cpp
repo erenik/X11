@@ -11,6 +11,7 @@ int main (int argc, char *argv[])
     enum{ 
         BASIC,
         BASIC_GL,
+        MULTI_GL,
     };
     for (int i = 0; i < argc; ++i)
     {
@@ -22,6 +23,9 @@ int main (int argc, char *argv[])
                 mode = 0;
             if (strcmp(arg, "gl") == 0)
                 mode = BASIC_GL;
+            if (strcmp(arg, "multi-gl") == 0)
+                mode = MULTI_GL;
+            
                
         }
     }
@@ -32,10 +36,12 @@ int main (int argc, char *argv[])
             BasicWindow();
             break;
         case BASIC_GL:
-            GLWindow();
+            SingleGLWindow();
             break;
+        case MULTI_GL:
+            MultiGLWindows();
         default:
-            std::cout<<"\nBad mode. Available modes: basic, gl";
+            std::cout<<"\nBad mode. Available modes: basic, gl, multi-gl";
     } 
     std::cout<<"\nExiting";
     return 0;
