@@ -314,7 +314,7 @@ macro (addProject ProjectName projectFoldersToNotExclude)
 		# GL
 		set(custom_libraries libGL.so  libGLU.so "-lGLEW")
 		# Link to X11
-		set(custom_libraries ${custom_libraries} "-lX11")
+		set(custom_libraries ${custom_libraries} "-lX11 -lpthread")
 		# AL
 	#	set(custom_libraries ${custom_libraries} "-lalut -lopenal")
 		# Ogg Vorbis

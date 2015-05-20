@@ -70,11 +70,13 @@ void SingleGLWindow()
 		assert(false && "Failed to bind context");
 	}
 
+    float triangleRot = 0.f;
     while ( 1 ) {
     	// Screw events?
 		XGetWindowAttributes(display, window, &window_attributes);
 		SetupViewProjectionGL(window_attributes.width, window_attributes.height);
-		RenderTriangle();
+		triangleRot += 0.5f;
+        RenderTriangle(triangleRot);
 		if(swapBuffers)
 		{
 			glXSwapBuffers(display, window );

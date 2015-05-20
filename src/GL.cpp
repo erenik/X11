@@ -41,17 +41,18 @@ void SetupViewProjectionGL(int width, int height)
 	glDisable(GL_CULL_FACE);
 }
 
-void RenderTriangle()
+void RenderTriangle(float triRot)
 {
-	static float x_rot = 0.f;
-	x_rot += 0.2f;
+//	static float x_rot = 0.f;
+//	x_rot += 0.2f;
+//	x_rot = triRot;
 //	std::cout<<"\nx_rot: "<<x_rot;
 	// place whats rendered here
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glTranslatef(0.0, 0.0, -2.0);
-	glRotatef(x_rot, 0.0, 1.0, 0.0);
+	glRotatef(triRot, 0.0, 1.0, 0.0);
 	glBegin(GL_TRIANGLES); // front side
 	glColor3f ( 1.0, 0.0, 0.0 ); // red
 	glVertex3f( 0.0, 0.5, 0.0 );

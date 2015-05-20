@@ -13,7 +13,7 @@ void InitGlewAndGL();
 
 /// Sets up View and Projection matrices for test-rendering.
 void SetupViewProjectionGL(int width, int height);
-void RenderTriangle();
+void RenderTriangle(float triRot);
 
 
 #endif

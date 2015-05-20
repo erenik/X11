@@ -12,6 +12,7 @@ int main (int argc, char *argv[])
         BASIC,
         BASIC_GL,
         MULTI_GL,
+        MULTI_GL_THREADED
     };
     for (int i = 0; i < argc; ++i)
     {
@@ -25,6 +26,8 @@ int main (int argc, char *argv[])
                 mode = BASIC_GL;
             if (strcmp(arg, "multi-gl") == 0)
                 mode = MULTI_GL;
+            if (strcmp(arg, "multi-gl-threaded") == 0)
+                mode = MULTI_GL_THREADED;
             
                
         }
@@ -40,6 +43,10 @@ int main (int argc, char *argv[])
             break;
         case MULTI_GL:
             MultiGLWindows();
+            break;
+        case MULTI_GL_THREADED:
+            SeparateRenderThreadMultiGLWindows();
+            break;
         default:
             std::cout<<"\nBad mode. Available modes: basic, gl, multi-gl";
     } 

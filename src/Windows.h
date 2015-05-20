@@ -22,5 +22,6 @@
 void BasicWindow();
 void SingleGLWindow();
 void MultiGLWindows();
+void SeparateRenderThreadMultiGLWindows();
 
 #endif
