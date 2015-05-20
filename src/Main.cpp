@@ -48,7 +48,7 @@ int main (int argc, char *argv[])
             SeparateRenderThreadMultiGLWindows();
             break;
         default:
-            std::cout<<"\nBad mode. Available modes: basic, gl, multi-gl";
+            std::cout<<"\nBad mode. Available modes: basic, gl, multi-gl, multi-gl-threaded";
     } 
     std::cout<<"\nExiting";
     return 0;
